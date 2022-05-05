@@ -35,3 +35,8 @@ puts (1.0 + 2.0)/2.0
 puts "\nテスト7"
 puts 1 + "1".to_i # int型に変換
 puts "ターミネーター" + 2.to_s # 文字列に変換
+
+puts "\nテスト8"
+n = 3
+puts n += 1
+puts n
