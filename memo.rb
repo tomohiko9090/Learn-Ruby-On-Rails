@@ -38,5 +38,65 @@ puts "ターミネーター" + 2.to_s # 文字列に変換
 
 puts "\nテスト8"
 n = 3
-puts n += 1
+n += 1
 puts n
+
+# or and は優先順位が引くい。&& || とは混ぜない方が無難
+puts "\nテスト8"
+d = true
+e = false
+puts d && e 
+puts d || e # どっちかがTrueならTrueになる
+
+puts "\nテスト9"
+puts !d # 逆になる
+puts not(d)
+
+puts "\nテスト10"
+puts !d || true # 前半の判定が先
+puts true or true and false # 優先順位が一緒だから前半で判定
+\
+puts "\nテスト10"
+score = 50
+if score >= 90
+  puts "A"
+elsif score >= 80
+  puts "B"
+elsif score >= 60
+  puts "C"
+else
+  puts "D"
+end
+
+puts "\nテスト10"
+animal = "cat"
+if animal == "cat"
+  puts "meow"
+elsif animal >= "dog"
+  puts "bowwow"
+elsif animal >= "cow"
+  puts "moomoo"
+else
+  puts "Not found."
+end
+
+puts "\nテスト10"
+# 上から実行することを生かしてる。。。
+age = 5
+if 12 <= age
+  puts "入場料は5000円"
+elsif 6 <= age
+  puts "入場料は2500円"
+else
+  puts "入場料は1000円"
+end
+
+# 0でない時は"Not zero."
+puts "\nテスト11"
+n = 0
+puts n.zero?
+unless n.zero?
+  puts "Not zero."
+else 
+  puts "This is zero."
+end
