@@ -229,9 +229,13 @@ p h.join("_")
 puts "\nテスト28"
 p h.sort
 p h.sort.reverse
-p h.size
+p h.size #配列の数
 
 puts "\nテスト29"
+# ハッシュと辞書型のことをいうらしい
+tomohiko = {"高校" => "勝高", "大学" => "広大", "大学院"  => "京大"}
+p tomohiko
+
 puts "\nテスト30"
 puts "\nテスト31"
 
