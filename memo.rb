@@ -235,8 +235,56 @@ puts "\nテスト29"
 # ハッシュと辞書型のことをいうらしい
 tomohiko = {"高校" => "勝高", "大学" => "広大", "大学院"  => "京大"}
 p tomohiko
+puts tomohiko["大学院"]
+
+tomohiko["社会人"] = "リンモチ" #追加
+p tomohiko
+tomohiko["社会人"] = "サイバーエージェント" #変更
+p tomohiko
+tomohiko.delete("社会人") #削除
+p tomohiko
 
 puts "\nテスト30"
+tomohiko = {"高校": "勝高", "大学": "広大", "大学院": "京大"} #シンボルの方が処理が速い
+p tomohiko
+tomohiko.delete(:"大学院")
+p tomohiko
+
+p tomohiko.keys
+p tomohiko.values
+p tomohiko.size
+
+p tomohiko.has_key?(:"大学")
+p tomohiko.has_key?(:"社会人")
+
 puts "\nテスト31"
+numbers = [1, 2, 3, 4, 5]
 
+numbers.each do |number|
+  puts number
+end
 
+numbers.each {|number|
+  puts number
+}
+
+numbers.each {|number| puts number}
+
+puts "\nテスト32"
+# eachでかける時は、eachで書く
+for number in numbers do
+  puts number
+end
+
+puts "\nテスト33"
+friends = {"tomo": 80, "minaho": 93, "seina": 84}
+friends.each do |k, v|
+  if 90 < v
+    puts "#{k}, #{v}"
+  end
+end
+
+puts "\nテスト33"
+5.times do
+  puts "hello!"
+end
