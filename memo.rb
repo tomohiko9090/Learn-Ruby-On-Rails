@@ -292,3 +292,18 @@ end
 5.times do |i|
   puts "#{i}:Hello!"
 end
+
+5.times { |i|
+  puts "#{i}:Hello!"
+}
+
+puts "\nテスト33"
+i = 1
+while i < 10 do
+  puts i
+  i += 1
+end
+
+puts "\nテスト33"
+10.upto(14){ |n| puts n } # 10から14まで順番に増やしていく
+10.downto(5){ |n| puts n } # 10から5まで順番に減らしていく
