@@ -344,3 +344,19 @@ numbers.each do |number|
   next if number.odd?
   puts number
 end
+
+puts "\nテスト40"
+1.step(10, 2) {|i| puts i}
+
+puts "\nテスト41"
+10.step(1, -2) {|i| puts i}
+
+puts "\nテスト42"
+class Car
+  def hello
+    puts 'hello!'
+  end
+end
+
+car = Car.new
+car.hello
