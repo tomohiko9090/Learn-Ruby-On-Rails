@@ -284,7 +284,7 @@ friends.each do |k, v|
   end
 end
 
-puts "\nテスト33"
+puts "\nテスト34"
 5.times do
   puts "hello!"
 end
@@ -297,13 +297,50 @@ end
   puts "#{i}:Hello!"
 }
 
-puts "\nテスト33"
+puts "\nテスト35"
 i = 1
 while i < 10 do
   puts i
   i += 1
 end
 
-puts "\nテスト33"
+puts "\nテスト36"
 10.upto(14){ |n| puts n } # 10から14まで順番に増やしていく
 10.downto(5){ |n| puts n } # 10から5まで順番に減らしていく
+
+puts "\nテスト37"
+# i = 0
+# loop do 
+#   puts i
+#   i += 1
+# end
+
+# i = 0
+# while true
+#   puts i 
+#   i += 1
+# end
+
+i = 0
+loop do
+  puts i 
+  i += 1
+  break if i ==10
+end
+
+puts "\nテスト38"
+numbers = [1, 2, 3, 4, 5]
+numbers.each do |number|
+  if number % 2 == 1
+    puts number
+  end
+end
+
+puts "\nテスト39"
+numbers = [1, 2, 3, 4, 5]
+numbers.each do |number|
+  # next if number % 2 == 0
+  # next if number.even?
+  next if number.odd?
+  puts number
+end
