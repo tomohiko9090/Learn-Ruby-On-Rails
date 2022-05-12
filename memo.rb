@@ -360,3 +360,20 @@ end
 
 car = Car.new
 car.hello
+
+puts "\nテスト43"
+class Car
+  def initialize(name)
+    @name = name
+  end
+
+  def hello
+    puts "Hello! I am #{@name}."
+  end
+end
+
+car = Car.new("救急車")
+car.hello
+
+bicycle = Car.new("ロードバイク")
+bicycle.hello
