@@ -395,17 +395,20 @@ bicycle.hello
 puts "\nテスト45"
 # 読み書きするメソッド = インスタンスメソッド
 class Car
+  attr_accessor :name
   def initialize(name)
     @name = name
   end
 
-  def name
-    @name
-  end
+  # def name
+  #   @name
+  # end
 
-  def name=(value)
-    @name = value
-  end
+  # def name=(value)
+  #   @name = value
+  # end
+
+
 end
 
 bicycle = Car.new("ロードバイク")
@@ -413,3 +416,7 @@ puts bicycle.name
 
 bicycle.name = "車"
 puts bicycle.name
+
+
+
+puts "\nテスト45"
