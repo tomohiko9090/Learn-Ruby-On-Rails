@@ -377,3 +377,39 @@ car.hello
 
 bicycle = Car.new("ロードバイク")
 bicycle.hello
+
+puts "\nテスト44"
+class Car
+  def initialize(name)
+    @name = name
+  end
+
+  def hello
+    puts @name
+  end
+end
+
+bicycle = Car.new("ロードバイク")
+bicycle.hello
+
+puts "\nテスト45"
+# 読み書きするメソッド = インスタンスメソッド
+class Car
+  def initialize(name)
+    @name = name
+  end
+
+  def name
+    @name
+  end
+
+  def name=(value)
+    @name = value
+  end
+end
+
+bicycle = Car.new("ロードバイク")
+puts bicycle.name
+
+bicycle.name = "車"
+puts bicycle.name
