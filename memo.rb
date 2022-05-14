@@ -421,6 +421,18 @@ puts bicycle.name
 bicycle.name = "車"
 puts bicycle.name
 
-
-
 puts "\nテスト45"
+class Car
+  @@count = 0 #これで、記録できる
+  def initialize(name)
+    @name = name 
+    @@count += 1 
+  end
+
+  def hello
+    puts "#{@@count}"
+  end
+
+end
+
+
