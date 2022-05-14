@@ -394,8 +394,14 @@ bicycle.hello
 
 puts "\nテスト45"
 # 読み書きするメソッド = インスタンスメソッド
+# attr_reader #rede（読む）
+# attr_writer #write（書く）
+# attr_accessor #access(読むと書くの両方)
+
 class Car
-  attr_accessor :name
+  attr_accessor :name #コメントアウト部分に相当
+  # attr_reader :name
+  # attr_writer :name
   def initialize(name)
     @name = name
   end
@@ -407,8 +413,6 @@ class Car
   # def name=(value)
   #   @name = value
   # end
-
-
 end
 
 bicycle = Car.new("ロードバイク")
