@@ -428,11 +428,32 @@ class Car
     @name = name 
     @@count += 1 
   end
+  def hello
+    puts "#{@@count}"
+  end
+end
+
+bicycle = Car.new("ロードバイク")
+bicycle.hello
+
+bicycle = Car.new("ロードバイク")
+bicycle.hello
+
+
+puts "\nテスト46"
+# クラスメソッド
+class Car
+  @@count = 0 #これで、記録できる
+  def initialize(name)
+    @name = name 
+    @@count += 1 
+  end
 
   def hello
     puts "#{@@count}"
   end
 
+  def self.info
+    puts "#{@@count} instance"
+  end
 end
-
-
