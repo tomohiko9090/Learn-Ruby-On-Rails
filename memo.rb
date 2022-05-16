@@ -442,7 +442,7 @@ bicycle.hello
 
 puts "\nテスト46"
 # クラスメソッド
-class Car
+class Test
   @@count = 0 #これで、記録できる
   def initialize(name)
     @name = name 
@@ -453,7 +453,92 @@ class Car
     puts "#{@@count}"
   end
 
-  def self.info
-    puts "#{@@count} instance"
+  def self.info 
+    puts "#{@@count} instance" 
   end
 end
+
+method_direct = Test.info #initializeメソッドが呼ばれない！
+
+method_general = Test.new("普通") #インスタンスを生成する
+Test.info 
+
+puts "\nテスト47"
+# クラスメソッド
+class Test
+  REGION = "USA"
+  @@count = 0 
+  def initialize(name)
+    @name = name 
+    @@count += 1 
+  end
+
+  def hello
+    puts "#{@@count}"
+  end
+
+  def self.info 
+    puts "#{@@count} instance Region #{REGION}" 
+  end
+end
+
+method_direct = Test.info 
+
+method_general = Test.new("普通") 
+Test.info 
+
+puts Test::REGION #クラスの中にある定数をダイレクトで呼んでくる
+
+
+puts "\nテスト48"
+# 親クラス
+class User 
+  def initialize(name)
+    @name = name
+  end
+
+  def hello
+    puts "Hello! I am #{@name}"
+  end
+end
+
+# 子クラス
+class AdminUser < User #クラスの継承
+  def admin_hello
+    puts "私の名前は、#{@name}"
+  end
+
+  def hello
+    puts "親クラスのメソッドをオーバーライドしてみた"
+  end
+end
+
+test1 = User.new("kuzuba")
+test1.hello
+
+test2 = AdminUser.new("tomohiko")
+test2.admin_hello
+test2.hello
+
+puts "\nテスト49"
+puts Integer.superclass #下が親クラス
+puts Numeric.superclass #下が親クラス
+puts Object.superclass #下が親クラス
+# puts Basic.superclass #最上級クラス
+
+puts "\nテスト50"
+# モジュールはメソッドをまとめたい時に便利
+# モジュールはインスタンス化できない！継承もできない！
+module Driver
+  def self.run
+    puts "Run"
+  end
+
+  def self.stop
+    puts "Stop"
+  end
+end
+
+#Driver = Driver.new #エラーとなる
+Driver.run
+Driver.stop
