@@ -542,3 +542,17 @@ end
 #Driver = Driver.new #エラーとなる
 Driver.run
 Driver.stop
+
+puts "\nテスト51"
+puts "---Please enter an integer.---"
+i = gets.to_i #ターミナルから取得した数字をintにし、変数に入れる
+
+begin
+  puts 10 / i
+rescue => ex #エラー内容を取得 例外object
+  puts "error"
+  puts ex.message
+  puts ex.class #例外のclassオブジェクトの種類
+ensure #例外発生してもしなくても実行される
+  puts "end"
+end
