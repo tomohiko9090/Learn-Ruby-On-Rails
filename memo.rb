@@ -556,3 +556,27 @@ rescue => ex #エラー内容を取得 例外object
 ensure #例外発生してもしなくても実行される
   puts "end"
 end
+
+puts "\nテスト52"
+# メソッドの公開範囲
+# public 
+# private
+
+class User
+  def initialize(name)
+    @name = name
+  end
+
+  def test
+    hello
+  end
+
+  private #プライベートメソッド
+    def hello 
+      puts "Hello! I #{@name} am"
+    end
+end
+
+nakamura = User.new("nakamura")
+nakamura.test
+
